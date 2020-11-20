@@ -1,0 +1,24 @@
+name "dlang_kernel"
+authors "Joseph C Wang"
+license "boost"
+targetType "executable"
+dependency "drepl" version="~>0.2.1"
+dependency "jupyter_wire" path="../jupyter-wire"
+
+configuration "default" {
+	versions "StdLoggerDisableTrace"
+}
+
+configuration "verbose" {
+    versions "JupyterLogVerbose"
+}
+
+
+configuration "stdout" {
+    versions "JupyterLogStdout"
+}
+
+
+configuration "stdout-verbose" {
+    versions "JupyterLogStdout" "JupyterLogVerbose"
+}
